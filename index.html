@@ -1,44 +1,110 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Tour Guide</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar-root">
-        <div class="logo-div">
-            <img class="logo-image" src="Assets/logo.png" alt="logo-nav">
-            <h4 class="text-[28px]">Tourguide</h4><span class="text-[28px]">.</span>
-        </div>
-        <div class="links-buttons">
-            <ul class="navbar-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li class="nav-dropdown">
-                    <a href="">Services</a>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="">Destination</a></li>
-                        <li><a href="">Prices</a></li>
-                        <li><a href="">Trip Gallery</a></li>
-                        <li><a href="">Tourist Guide</a></li>
-                        <li><a href="">Hotel & Resort</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Top Deals</a></li>
-                <li><a href="">Packages</a></li>
-                <li><a href="">Testimonial</a></li>
-                <li><a href="">Rate Us?</a></li>
-                <li><a href="">Contact Us</a></li>
+      <div class="logo-div">
+        <img class="logo-image" src="Assets/logo.png" alt="logo-nav" />
+        <h4 class="text-[28px] font-bold">Tourguide</h4>
+        <span class="text-[28px] text-blue-500 font-bold">.</span>
+      </div>
+      <div class="links-buttons">
+        <ul class="navbar-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="nav-dropdown">
+            <a href="">Services</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="#destination">Destination</a></li>
+              <li><a href="">Prices</a></li>
+              <li><a href="">Trip Gallery</a></li>
+              <li><a href="">Tourist Guide</a></li>
+              <li><a href="">Hotel & Resort</a></li>
             </ul>
-            <button>Login/SignUp</button>
-        </div>
+          </li>
+          <li><a href="">Top Deals</a></li>
+          <li><a href="">Packages</a></li>
+          <li><a href="">Testimonial</a></li>
+          <li><a href="">Rate Us?</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+        <button>Login/SignUp</button>
+      </div>
     </nav>
 
-    <section class="hero">
-        
+    <section class="hero" id="home">
+      <div class="hero-images-div">
+        <img src="Assets/Home/homeImage1.jpg" alt="" class="first-image" />
+        <img src="Assets/Home/homeImage2.jpg" alt="" class="second-image" />
+      </div>
+      <div class="hero-texts-div">
+        <div class="headings-div">
+          <h2>Find Your Perfect</h2>
+          <h2>Getaway</h2>
+          <h2>Discover The</h2>
+          <h2>World's Best Kept</h2>
+          <h2 class="changing-heading">Secrets</h2>
+        </div>
+        <p class="hero-texts-div-paragraph">
+          Make your travel more enjoyable with us. We are the best travel agency
+          and we are providing the best travel services for our clients.
+        </p>
+        <div class="hero-texts-button-div">
+          <button>Membership</button>
+          <button>Plan A Trip</button>
+          <button>Book Now</button>
+        </div>
+        <div class="circle-image-div">
+          <img
+            class="hero-circle-image"
+            src="Assets/Home/circle.jpg"
+            alt="circle image hero"
+          />
+          <i class="material-icons">play_arrow</i>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about max-w-screen-xl px-4 mx-auto text-center pb-14">
+          <div class="about-container col-span-2 mx-auto">
+            <h1 class="about-heading">
+              About Us
+            </h1>
+
+            <article
+              class="about-article w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert"
+            >
+              <br />
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme"
+                  allowfullscreen=""
+                ></iframe>
+              </div>
+              <p
+                class="about-content"
+                style="text-align: justify"
+              >
+                Welcome to TourGuide, your trusted companion in discovering the
+                wonders of the world. We provide unparalleled assistance,
+                offering curated itineraries, local guides, and unforgettable
+                experiences tailored just for you. Join our growing community
+                and let your journey become a story worth sharing!
+              </p>
+            </article>
+          </div>
+
+
     </section>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
