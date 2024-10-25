@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +8,10 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Tour Guide</title>
   </head>
@@ -74,81 +79,155 @@
       </div>
     </section>
 
-    <section id="about" class="about max-w-screen-xl px-4 mx-auto text-center pb-14">
-          <div class="about-container col-span-2 mx-auto">
-            <h1 class="about-heading">
-              About Us
-            </h1>
-
-            <article
-              class="about-article w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert"
-            >
-              <br />
-              <div class="video-container">
-                <iframe
-                  src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <p
-                class="about-content"
-                style="text-align: justify"
-              >
-                Welcome to TourGuide, your trusted companion in discovering the
-                wonders of the world. We provide unparalleled assistance,
-                offering curated itineraries, local guides, and unforgettable
-                experiences tailored just for you. Join our growing community
-                and let your journey become a story worth sharing!
-              </p>
-            </article>
+    <section
+      id="about"
+      class="about max-w-screen-xl px-4 mx-auto text-center pb-14"
+    >
+      <div class="about-container col-span-2 mx-auto">
+        <h1 class="about-heading">About Us</h1>
+        <article
+          class="about-article w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert"
+        >
+          <br />
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme"
+              allowfullscreen=""
+            ></iframe>
           </div>
+          <p class="about-content" style="text-align: justify">
+            Welcome to TourGuide, your trusted companion in discovering the
+            wonders of the world. We provide unparalleled assistance, offering
+            curated itineraries, local guides, and unforgettable experiences
+            tailored just for you. Join our growing community and let your
+            journey become a story worth sharing!
+          </p>
+        </article>
+      </div>
 
-          <div class="about-items-container">
-            <div class="about-item">
-              <i class="material-icons">handshake</i>
-              <h3 class="about-item-number">25000</h3>
-              <p class="about-item-text">Guides</p>
-            </div>
-            <div class="about-item">
-              <i class="material-icons">luggage</i>
-              <h3 class="about-item-number">20000</h3>
-              <p class="about-item-text">Tours</p>
-            </div>
-            <div class="about-item">
-              <i class="material-icons">location_on</i>
-              <h3 class="about-item-number">20000</h3>
-              <p class="about-item-text">Destinations</p>
-            </div>
-          </div>
-
-
-    </section>
-
-    <section class="destination">
-      <div class="carousel-container">
-        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-        
-        <div class="carousel">
-            <div class="carousel-item">
-                <img src="https://picsum.photos/400/300?random=1" alt="Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/400/300?random=2" alt="Image 2">
-            </div>
-            <div class="carousel-item active">
-                <img src="https://picsum.photos/400/300?random=3" alt="Image 3">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/400/300?random=4" alt="Image 4">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/400/300?random=5" alt="Image 5">
-            </div>
+      <div class="about-items-container">
+        <div class="about-item">
+          <i class="material-icons">handshake</i>
+          <h3 class="about-item-number">25000</h3>
+          <p class="about-item-text">Guides</p>
         </div>
-        
-        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
-    </div>
+        <div class="about-item">
+          <i class="material-icons">luggage</i>
+          <h3 class="about-item-number">20000</h3>
+          <p class="about-item-text">Tours</p>
+        </div>
+        <div class="about-item">
+          <i class="material-icons">location_on</i>
+          <h3 class="about-item-number">20000</h3>
+          <p class="about-item-text">Destinations</p>
+        </div>
+      </div>
     </section>
+
+    <section id="destination" class="destination">
+      <div class="destination-texts">
+        <h2>Explore Top Destinations</h2>
+        <p>
+          Explore your dream places around the world. Here you can find your perfect destination.
+        </p>
+      </div>
+      <div class="collection">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/eiffeltower.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/maldives.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/MuseumofFuture.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/TajMahal.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/TimesSquare.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/giantWheel.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+            <div class="content swiper-slide">
+              <img src="Assets/Destination/Ladakh.jpg" alt="" />
+              <div class="text-content">
+                <h3>Photography</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  accusamus ratione nesciunt atque, dolores vel culpa debitis
+                  officia expedita unde?
+                </p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+          </div>
+          <!-- Add navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,10 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html{
+html {
   scroll-behavior: smooth;
-
 }
 body {
   overflow-x: hidden;
@@ -25,7 +23,7 @@ body {
   gap: 40px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .logo-div {
   display: flex;
@@ -64,7 +62,7 @@ body {
   border-radius: 5px;
   padding: 17px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -255,11 +253,11 @@ iframe {
   margin-top: 100px;
   display: flex;
   justify-content: center;
-  /* gap: 1px; */
+  gap: 9px;
 }
 
 .about-item {
-  width: 22vmin;
+  width: 26vmin;
   height: 28vmin;
   display: flex;
   flex-direction: column;
@@ -268,19 +266,19 @@ iframe {
   margin: 0px 10px;
   font-size: 16px;
   border-width: 0.5px;
-  border-radius: 0.5em;
-  background: linear-gradient(to bottom, transparent, rgb(153, 139, 251));
   border: none;
+  border-radius: 0.5em;
+  background: linear-gradient(white, rgb(153, 139, 251));
   border-bottom: 10px solid #40349c;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
-
 .about-item i {
   color: #06006e;
   font-size: 3.5em;
   text-align: center;
   font-weight: 600;
 }
-
 .about-item-number {
   color: #32316a;
   display: grid;
@@ -288,7 +286,6 @@ iframe {
   font-size: 3em;
   font-weight: 700;
 }
-
 .about-item-text {
   color: #6c2121;
   font-size: 1.2em;
@@ -299,83 +296,116 @@ iframe {
   line-height: 1;
 }
 
-
-/* Destination */
-.destination{
+/* Destination section */
+.destination {
   height: 100%;
-  padding-top: 400px;
+  padding-top: 200px;
+  padding-bottom: 100px;
   display: flex;
-  justify-content: center;
   align-items: center;
-
+  flex-direction: column;
 }
-
 
 /* Destination carousel */
-.carousel-container {
-  position: relative;
+.collection {
+  height: 67vh;
   width: 80%;
-  max-width: 1000px;
-  height: 60vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
   align-items: center;
-  transition: transform 0.5s ease;
 }
-
-.carousel-item {
-  flex: 0 0 20%;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0.5;
-  transform: scale(0.8);
-  filter: blur(5px);
-  margin: 0 10px;
+.collection .content {
+  height: 30rem;
+  width: 20rem;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 6px solid #6a5acd;
 }
-
-.carousel-item.active {
-  flex: 0 0 40%;
-  opacity: 1;
-  transform: scale(1.2);
-  filter: blur(0);
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.content img {
+  height: 100%;
   object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.content:not(.swiper-slide-active) {
+  filter: blur(5px);
+}
+.text-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* background: rgba(0, 0, 0, 0.5); */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Controls */
-.carousel-control {
+.text-content p{
+  text-align: center;
+}
+
+.swiper-slide-active:hover .text-content {
+  opacity: 1;
+}
+
+.content:not(.swiper-slide-active):hover .text-content {
+  opacity: 1;
+  filter: blur(5px);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  z-index: 10;
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+  color: red;
+}
+
+.swiper-button-next {
+  right: 70px;
+}
+.swiper-button-prev {
+  left: 70px;
+}
+
+.destination-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.destination-texts h2 {
+  background: linear-gradient(
+    120deg,
+    #1c99fe 20.69%,
+    #7644ff 50.19%,
+    #fd4766 79.69%
+  );
   font-size: 2rem;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 100;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 34px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.carousel-control:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+.destination-texts p{
+  font-size: 1rem;
+  color: #0d213f;
 }
