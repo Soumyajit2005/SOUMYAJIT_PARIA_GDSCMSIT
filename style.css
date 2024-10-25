@@ -3,8 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html{
+  scroll-behavior: smooth;
+
+}
 body {
   overflow-x: hidden;
+  background-color: #fafcff;
 }
 
 /* NAVBAR */
@@ -237,10 +243,139 @@ iframe {
   border-radius: 10px;
 }
 
-.about-content{
+.about-content {
   background-color: white;
   color: #0d213f;
   padding: 13px;
   border-radius: 10px;
   margin-bottom: 32px;
+}
+
+.about-items-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  /* gap: 1px; */
+}
+
+.about-item {
+  width: 22vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.5em 1px;
+  margin: 0px 10px;
+  font-size: 16px;
+  border-width: 0.5px;
+  border-radius: 0.5em;
+  background: linear-gradient(to bottom, transparent, rgb(153, 139, 251));
+  border: none;
+  border-bottom: 10px solid #40349c;
+}
+
+.about-item i {
+  color: #06006e;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.about-item-number {
+  color: #32316a;
+  display: grid;
+  place-items: center;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.about-item-text {
+  color: #6c2121;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0em 00em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  line-height: 1;
+}
+
+
+/* Destination */
+.destination{
+  height: 100%;
+  padding-top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* Destination carousel */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 20%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.8);
+  filter: blur(5px);
+  margin: 0 10px;
+}
+
+.carousel-item.active {
+  flex: 0 0 40%;
+  opacity: 1;
+  transform: scale(1.2);
+  filter: blur(0);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
