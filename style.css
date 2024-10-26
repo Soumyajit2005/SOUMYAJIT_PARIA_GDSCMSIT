@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
   gap: 40px;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 10;
 }
 .logo-div {
   display: flex;
@@ -188,6 +188,20 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
+/* custom Cursor  */
+.cursor-circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  /* background-color: black; */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2; /* so that it stays on top of all other elements */
+}
+
+
 /* HERO */
 .hero {
   height: 100%;
@@ -281,6 +295,7 @@ body.dark-mode .hero-texts-div-paragraph{
   padding: 8px 20px;
   font-size: 1.07rem;
   font-weight: 500;
+  box-shadow: 2px 2px 8px red;
 }
 .circle-image-div {
   display: flex;
@@ -293,6 +308,7 @@ body.dark-mode .hero-texts-div-paragraph{
   width: 55px;
   height: 55px;
   border-radius: 100px;
+  box-shadow: 2px 2px 8px blue;
 }
 .circle-image-div .material-icons {
   background-color: white;
@@ -321,6 +337,7 @@ body.dark-mode .hero-texts-div-paragraph{
   background: linear-gradient(135deg, #90b7f6, #d6edf7);
   padding: 32px 15px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .about-heading {
   font-size: 3rem;

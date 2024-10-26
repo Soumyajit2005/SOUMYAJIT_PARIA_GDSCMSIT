@@ -81,3 +81,67 @@ themeToggle.addEventListener('click', function() {
     themeToggle.textContent = 'dark_mode';
   }
 });
+
+// custom cursor
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".cursor-circle");
+
+const colors = [
+  "#add8e6", // Light Blue
+  "#b0e0e6", // Powder Blue
+  "#87cefa", // Light Sky Blue
+  "#87ceeb", // Sky Blue
+  "#00bfff", // Deep Sky Blue
+  "#1e90ff", // Dodger Blue
+  "#6495ed", // Cornflower Blue
+  "#4682b4", // Steel Blue
+  "#5f9ea0", // Cadet Blue
+  "#7b68ee", // Medium Slate Blue
+  "#6a5acd", // Slate Blue
+  "#b0c4de", // Light Steel Blue
+  "#add8e6", // Light Blue
+  "#afeeee", // Pale Turquoise
+  "#48d1cc", // Medium Turquoise
+  "#40e0d0", // Turquoise
+  "#00ced1", // Dark Turquoise
+  "#20b2aa", // Light Sea Green
+  "#5f9ea0", // Cadet Blue
+  "#4682b4", // Steel Blue
+  "#b0e0e6"  // Powder Blue
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
