@@ -46,7 +46,7 @@ body.dark-mode {
 }
 .navbar-root .navbar-links {
   display: flex;
-  gap: 53px;
+  gap: 45px;
 }
 .navbar-root .navbar-links li {
   display: flex;
