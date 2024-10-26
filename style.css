@@ -59,6 +59,35 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
 }
+
+.navbar-root .links-buttons ul li a {
+  transition: 0.5s;
+  position: relative;
+}
+
+.navbar-root .links-buttons ul li a:hover {
+  color: #6a5acd;
+}
+
+.navbar-root .links-buttons ul li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-bottom: 2px solid #5109a4;
+  border-radius: 10px;
+  transform: scale(0) translateY(50px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.navbar-root .links-buttons ul li a:hover span {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
 .navbar-root .navbar-links {
   display: flex;
   gap: 45px;
@@ -194,13 +223,12 @@ body::-webkit-scrollbar-thumb {
   width: 24px;
   border-radius: 24px;
   /* background-color: black; */
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 2; /* so that it stays on top of all other elements */
 }
-
 
 /* HERO */
 .hero {
@@ -252,21 +280,20 @@ body.dark-mode .hero-texts-div .headings-div h2 {
   color: white;
 }
 
-
 .hero-texts-div .headings-div .changing-heading {
   color: #6a5acd;
 }
 
-body.dark-mode .hero-texts-div .headings-div .changing-heading{
+body.dark-mode .hero-texts-div .headings-div .changing-heading {
   color: red;
 }
 
 /* for cursor of the typewritter effect */
-.typed-cursor{
+.typed-cursor {
   color: #0d213f;
 }
 
-body.dark-mode .typed-cursor{
+body.dark-mode .typed-cursor {
   color: white;
 }
 
@@ -277,7 +304,7 @@ body.dark-mode .typed-cursor{
   transition: color 0.3s;
 }
 
-body.dark-mode .hero-texts-div-paragraph{
+body.dark-mode .hero-texts-div-paragraph {
   color: white;
 }
 
@@ -540,7 +567,7 @@ iframe {
     display: none;
   }
 
-  .hamburger{
+  .hamburger {
     display: flex;
   }
   .hero {
@@ -622,7 +649,7 @@ iframe {
     display: none;
   }
 
-  .hamburger{
+  .hamburger {
     display: flex;
   }
   .hero {
