@@ -10,6 +10,16 @@ dropdown.addEventListener('mouseleave', function() {
   dropdownMenu.classList.remove('show');
 });
 
+
+// Type writter effect hero section 
+var typed = new Typed('.changing-heading-text', {
+  strings: ["Wonders", "Gems", "Secrets"],
+  typeSpeed: 150,
+  backSpeed: 70,
+  loop: true
+});
+
+
 // destination carousel
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
@@ -30,4 +40,44 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    575: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: "auto",
+      spaceBetween: 40,
+    },
+  },
+});
+
+// hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar-links');
+
+hamburger.addEventListener('click', function() {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+// dark mode/light mode toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', function() {
+  body.classList.toggle('dark-mode');
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.textContent = 'light_mode';
+  } else {
+    themeToggle.textContent = 'dark_mode';
+  }
 });
