@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
   background-color: #fafcff;
   transition: background-color 0.3s, color 0.3s;
-  font-family: "Roboto", sans-serif;
 }
 body.dark-mode {
   background-color: #0e1525;
@@ -61,6 +60,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-root .links-buttons {
   display: flex;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-root .links-buttons ul li a {
@@ -379,6 +379,7 @@ body.dark-mode .hero-texts-div-paragraph {
   align-items: center;
   justify-content: center;
   height: 30vh;
+  font-family: "Roboto", sans-serif;
 }
 iframe {
   width: 100%;
@@ -394,12 +395,14 @@ iframe {
   padding: 13px;
   border-radius: 10px;
   margin-bottom: 32px;
+  font-family: "Roboto", sans-serif;
 }
 .about-items-container {
   margin-top: 100px;
   display: flex;
   justify-content: center;
   gap: 9px;
+  font-family: "Roboto", sans-serif;
 }
 .about-item {
   width: 26vmin;
@@ -449,6 +452,7 @@ iframe {
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Destination carousel */
