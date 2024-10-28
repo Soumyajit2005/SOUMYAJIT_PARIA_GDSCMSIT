@@ -63,6 +63,10 @@ body::-webkit-scrollbar-thumb {
   font-family: "Roboto", sans-serif;
 }
 
+.navbar-root .links-buttons button{
+  box-shadow: -5px 5px 11px rgb(56 56 55 / 55%);
+}
+
 .navbar-root .links-buttons ul li a {
   transition: 0.5s;
   position: relative;
@@ -247,6 +251,7 @@ body::-webkit-scrollbar-thumb {
   border: 6px solid #6a5acd;
   border-radius: 30px;
   transition: border-color 0.3s;
+  box-shadow: -5px 5px 6px rgb(3 3 3 / 44%);
 }
 
 body.dark-mode .hero-images-div img {
